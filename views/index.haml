@@ -1,52 +1,9 @@
 %html
   %head
-    /%link{ src: '' }
-    :css
-      body {
-        padding: 2em;
-        background-color: #272727;
-      }
-      .header {
-        margin: 20px;
-        text-align: center;
-        font-size: 60px;
-        color: #D4D4D4;
-      }
-
-      .button {
-        background-color: #616161;
-        padding: 3px 52px;
-        color: #D4D4D4;
-        margin: .5em 40%;
-        display: inline-block;
-        border: #272727;
-        font-size: 1em;
-        border-radius: 1em;
-        width: initial;
-      }
-      textarea {
-        background-color: #636363;
-        color: #FFF;
-        width: 80%;
-        height: 30%;
-        display: block;
-        margin: auto;
-      }
-    /%script{ src: '' }
-    :javascript
-      $('.js-convert').click(function() {
-        var html = $('.html').text();
-        $.post({
-          url: '/convert',
-          data: { html: html },
-          success: function(hamlData) {
-            $('.haml').text(hamlData.haml);
-          },
-          error: {
-          //  Display an error;
-          }
-        });
-      });
+    %link{ rel: 'stylesheet', href: url('css/application.css') }
+    %script{ src: 'https://code.jquery.com/jquery-2.2.3.min.js',
+             integrity: 'sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=', crossorigin: 'anonymous' }
+    %script{ src: url('javascript/application.js') }
   %body
     .header Html(.erb) to Haml converter
     %textarea.html{ placeholder: 'Type your html content here' }

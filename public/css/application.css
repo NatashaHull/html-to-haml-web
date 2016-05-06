@@ -1,0 +1,47 @@
+body {
+    padding: 2em;
+    background-color: #272727;
+}
+.header {
+    margin: 20px;
+    text-align: center;
+    font-size: 60px;
+    color: #D4D4D4;
+}
+
+.button {
+    background-color: #616161;
+    padding: 3px 52px;
+    color: #D4D4D4;
+    margin: .5em 30%;
+    display: inline-block;
+    border: #272727;
+    font-size: 1em;
+    border-radius: 1em;
+    width: initial;
+}
+
+.button:active {
+    background-color: #4E4E4E;
+}
+
+@media(min-width: 900px) {
+    .button {
+        margin: .5em 42%;
+    }
+}
+
+@media(min-width: 600px) and (max-width: 900px) {
+    .button {
+        margin: .5em 35%;
+    }
+}
+
+textarea {
+    background-color: #636363;
+    color: #FFF;
+    width: 80%;
+    height: 35%;
+    display: block;
+    margin: auto;
+}
