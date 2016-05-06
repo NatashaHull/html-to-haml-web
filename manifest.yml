@@ -1,0 +1,4 @@
+---
+applications:
+- name: html-to-haml
+  command: ruby router.rb
