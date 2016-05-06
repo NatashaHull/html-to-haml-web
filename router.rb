@@ -1,9 +1,7 @@
 require 'bundler/setup'
 require 'sinatra'
 require 'json'
-# This relies on the existence of a symlink to the html-to-haml code
-# for this directory
-require_relative './html-to-haml/lib/html_to_haml/converter'
+require 'html_to_haml/converter.rb'
 
 get '/' do
   haml :index
