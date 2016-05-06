@@ -12,7 +12,7 @@ $(document).ready(function() {
       },
       error: function(errData) {
         $('.js-convert').removeAttr("disabled");
-        errMsg = errData.error;
+        var errMsg = errData.responseJSON.error;
         $('.haml').text(errMsg);
       }
     });

@@ -10,7 +10,12 @@ get '/' do
 end
 
 post '/convert.json' do
-  haml = HtmlToHaml::Converter.new(params[:html]).convert
   content_type :json
-  { haml: haml }.to_json
+  begin
+    haml = HtmlToHaml::Converter.new(params[:html]).convert
+    { haml: haml }.to_json
+  rescue HtmlToHaml::ParseError => e
+    status 422
+    { error: e.message }.to_json
+  end
 end
