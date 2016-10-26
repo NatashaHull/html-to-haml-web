@@ -3,7 +3,7 @@ GEM
   specs:
     haml (4.0.7)
       tilt
-    html-to-haml (0.0.4)
+    html-to-haml (0.0.6)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -18,8 +18,8 @@ PLATFORMS
 
 DEPENDENCIES
   haml (~> 4.0.7)
-  html-to-haml (>= 0.0.4)
+  html-to-haml (>= 0.0.6)
   sinatra (~> 1.4.7)
 
 BUNDLED WITH
-   1.12.1
+   1.12.5
